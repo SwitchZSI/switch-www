@@ -1,0 +1,38 @@
+### PROTECT FILES ###
+<FilesMatch "\.(htaccess|htpasswd|ini|fla|psd|log|sh|bk)$">
+Order Allow,Deny
+Deny from all
+</FilesMatch>
+
+ServerSignature Off
+AddDefaultCharset UTF-8
+
+RewriteEngine on
+RewriteRule ^(home)$ index.php
+RewriteRule ^(index.html)$ home
+
+RewriteRule ^(kontakt)$ contact.php
+RewriteRule ^(contact.html)$ kontakt
+
+RewriteRule ^(audycje)$ audycje.php
+RewriteRule ^(audycje.html)$ audycje
+
+RewriteRule ^(koncert-zyczen)$ zamow.php
+RewriteRule ^(zamow.html)$ koncert-zyczen
+
+RewriteRule ^(projekt)$ projekt.php
+RewriteRule ^(projekt.html)$ projekt
+
+RewriteRule ^(sklad)$ sklad.php
+RewriteRule ^(sklad.html)$ sklad
+
+RewriteRule ^(sprzet)$ sprzet.php
+RewriteRule ^(sprzet.html)$ sprzet
+
+RewriteRule ^(quiz)$ quiz.php
+RewriteRule ^(quiz.html)$ quiz
+
+RewriteRule ^(glosowanie)$ glosowanie.php
+RewriteRule ^(glosowanie.html)$ glosowanie
+
+ErrorDocument 404 /404.html
